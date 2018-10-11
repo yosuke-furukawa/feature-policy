@@ -5,14 +5,14 @@ This module adds a `Feature-Policy` http header.
 # install
 
 ```
-$ npm i featurepolicy
+$ npm i node-feature-policy
 ```
 
 # usage
 
 ```
 const express = require('express');
-const featurePolicy = require('featurepolicy');
+const featurePolicy = require('node-feature-policy');
 const app = express();
 
 app.use(featurePolicy({
