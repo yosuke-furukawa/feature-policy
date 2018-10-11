@@ -1,0 +1,32 @@
+{
+  "name": "feature-policy",
+  "version": "1.0.0",
+  "description": "Feature Policy HTTP Header middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "eater"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosuke-furukawa/feature-policy.git"
+  },
+  "keywords": [
+    "feature",
+    "policy",
+    "http",
+    "header"
+  ],
+  "author": "yosuke-furukawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yosuke-furukawa/feature-policy/issues"
+  },
+  "homepage": "https://github.com/yosuke-furukawa/feature-policy#readme",
+  "dependencies": {
+    "on-headers": "^1.0.1"
+  },
+  "devDependencies": {
+    "eater": "^3.2.0",
+    "express": "^4.16.4"
+  }
+}
