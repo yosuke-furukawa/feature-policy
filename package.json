@@ -1,5 +1,5 @@
 {
-  "name": "feature-policy",
+  "name": "featurepolicy",
   "version": "1.0.0",
   "description": "Feature Policy HTTP Header middleware",
   "main": "index.js",
