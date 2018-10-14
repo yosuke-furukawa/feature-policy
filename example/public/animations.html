@@ -1,0 +1,45 @@
+<style> 
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+@keyframes animation {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+#box.target {
+  animation-name: animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+</style>
+</head>
+<body>
+
+<div id="box">foo</div>
+<script>
+requestAnimationFrame(function () { animate() });
+
+function animate() {
+  var box = document.getElementById('box');
+  box.className = 'target';
+
+
+  // Start the animation.
+  getComputedStyle(box).width;  // Force the animation.
+
+  var animation = box.getAnimations()[0];
+
+  animation.currentTime = 0;
+  animation.currentTime = 1000;
+}
+</script>
+</body>

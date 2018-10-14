@@ -1,11 +1,14 @@
+<body>
 <script>
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "/foo.txt", true);
+xhr.open("GET", "/foo.txt", false);
 xhr.onload = function (e) {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
-      document.body.innerHtml = xhr.responseText;
+      const h1 = document.createElement("h1");
+      h1.textContent = xhr.responseText;
+      document.body.appendChild(h1);
     } else {
       console.error(xhr.statusText);
     }
@@ -14,5 +17,14 @@ xhr.onload = function (e) {
 xhr.onerror = function (e) {
   console.error(xhr.statusText);
 };
+try {
 xhr.send(null);
+}catch (e) {
+  const h1 = document.createElement("h1");
+  h1.style = "color: red";
+  h1.textContent = e.message;
+  document.body.appendChild(h1);
+}
+
 </script>
+</body>

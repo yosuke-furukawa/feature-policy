@@ -1,5 +1,15 @@
+<body>
 <script>
-document.open();
-document.write("<h1>test</h1>")
-document.close();
+try {
+  document.open();
+  document.write("<h1>This content is written in document.write😨</h1>")
+  document.close();
+} catch(e) {
+  const h1 = document.createElement("h1");
+  h1.style = "color: blue";
+  h1.textContent = `document.write is blocked.    ${e.message}`;
+  document.body.appendChild(h1);
+}
+
 </script>
+</body>

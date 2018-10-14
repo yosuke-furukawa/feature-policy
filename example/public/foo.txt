@@ -1,1 +1,2 @@
-test
+This content is loaded from Sync XHR !!!
+
